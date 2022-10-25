@@ -7,3 +7,5 @@ exclude =
     .env,
     requirements.txt
     README.md
+    __pycache__
+    .pytest_cache
