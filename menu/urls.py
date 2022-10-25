@@ -1,6 +1,8 @@
 from django.urls import path
-from .views import HelloAPIView
+from .views import CreateResturantView
 
 urlpatterns = [
-    path('hello/', HelloAPIView.as_view(), name="hello"),
+    path(
+        'resturants/', CreateResturantView.as_view(), name="create-resturant"
+    ),
 ]
