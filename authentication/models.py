@@ -35,11 +35,23 @@ class UserManager(BaseUserManager):
         return self._create_user(email, password, **extra_fields)
 
 
-class User(AbstractUser):
-    """User model."""
+class Employee(AbstractUser):
+    """Employee model."""
+
+    class PositionChoices(models.IntegerChoices):
+        """This class is used for choosing a position."""
+
+        ACTIVE = 0, "BackEnd Developer"
+        COMPLETED = 1, "FrontEnd Developer"
+        CANCELLED = 2, "Mobile Developer"
+        APPROVED = 3, "DevOps"
+        DECLINED = 4, "QA"
 
     username = None
+    first_name = models.CharField(max_length=30, blank=True, null=True)
+    last_name = models.CharField(max_length=30, blank=True, null=True)
     email = models.EmailField(unique=True)
+    position = models.IntegerField(choices=PositionChoices.choices)
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
