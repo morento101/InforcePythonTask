@@ -20,13 +20,13 @@ class Menu(models.Model):
     class DayChoices(models.IntegerChoices):
         """This class is used for choosing a day when menu will be served."""
 
-        MONDAY = 1, "Monday"
-        TUESDAY = 2, "Tuesday"
-        WEDNESDAY = 3, "Wednesday"
-        THURSDAY = 4, "Thursday"
-        FRIDAY = 5, "Friday"
-        SATURDAY = 6, "Saturday"
-        SUNDAY = 7, "Sunday"
+        MONDAY = 0, "Monday"
+        TUESDAY = 1, "Tuesday"
+        WEDNESDAY = 2, "Wednesday"
+        THURSDAY = 3, "Thursday"
+        FRIDAY = 4, "Friday"
+        SATURDAY = 5, "Saturday"
+        SUNDAY = 6, "Sunday"
 
     first_course = models.CharField(
         max_length=30, validators=[MinLengthValidator(3)]
