@@ -9,3 +9,5 @@ exclude =
     README.md
     __pycache__
     .pytest_cache
+
+docstring-convention = google
