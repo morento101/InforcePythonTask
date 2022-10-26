@@ -50,3 +50,15 @@ $ docker-compose up
 ```
 
 ----------------
+
+
+## ENDPOINTS
+- http://127.0.0.1:8000/authentication/employees/
+- http://127.0.0.1:8000/menu/create-resturant/
+- http://127.0.0.1:8000/menu/upload_menu/
+- http://127.0.0.1:8000/menu/today_menu/<int:pk>/
+- http://127.0.0.1:8000/menu/leave_review/
+- http://127.0.0.1:8000/menu/see_menu_rating/<int:pk>/
+- http://127.0.0.1:8000/api/token/
+- http://127.0.0.1:8000/api/token/refresh/
+
