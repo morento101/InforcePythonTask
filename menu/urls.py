@@ -1,5 +1,8 @@
 from django.urls import path
-from .views import CreateResturantView, UploadMenuView, SeeMenuForToday
+from .views import (
+    CreateResturantView, UploadMenuView, SeeMenuForToday, LeaveMenuReview,
+    SeeMenuRating
+)
 
 urlpatterns = [
     path(
@@ -9,5 +12,10 @@ urlpatterns = [
     path(
         'today_menu/<int:pk>/', SeeMenuForToday.as_view(),
         name='see-menu-for-today'
-    )
+    ),
+    path('leave_review/', LeaveMenuReview.as_view(), name='leave-review'),
+    path(
+        'see_menu_rating/<int:pk>/', SeeMenuRating.as_view(),
+        name='see_menu_rating'
+    ),
 ]
