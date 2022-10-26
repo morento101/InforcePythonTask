@@ -1,4 +1,3 @@
-from pydoc import describe
 import pytest
 from django.urls import reverse
 from django.contrib.auth import get_user_model
@@ -21,7 +20,8 @@ def test_valid_create_resturant(client):
     url = reverse("menu:create-resturant")
 
     admin = User(
-        email="test@gmail.com", password="test12345678", is_active=True, is_superuser=True
+        email="test@gmail.com", password="test12345678",
+        is_active=True, is_superuser=True
     )
     admin.is_admin = True
     admin.save()
@@ -51,7 +51,8 @@ def test_valid_upload_menu(client):
     url = reverse("menu:upload-menu")
 
     admin = User(
-        email="test@gmail.com", password="test12345678", is_active=True, is_superuser=True
+        email="test@gmail.com", password="test12345678",
+        is_active=True, is_superuser=True
     )
     admin.is_admin = True
     admin.save()
