@@ -59,3 +59,8 @@ class Employee(AbstractUser):
     REQUIRED_FIELDS = []
 
     objects = UserManager()
+
+    @property
+    def is_staff(self):
+        """Determines whether user is admin."""
+        return self.is_admin

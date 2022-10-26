@@ -4,9 +4,12 @@ from .views import (
     SeeMenuRating
 )
 
+app_name = 'menu'
+
 urlpatterns = [
     path(
-        'resturants/', CreateResturantView.as_view(), name="create-resturant"
+        'create-resturant/', CreateResturantView.as_view(),
+        name="create-resturant"
     ),
     path('upload_menu/', UploadMenuView.as_view(), name='upload-menu'),
     path(
